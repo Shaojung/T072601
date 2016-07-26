@@ -2,7 +2,9 @@ package tw.com.pcschool.t072601;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,8 +12,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // setContentView(R.layout.activity_main);
-        Button btn = new Button(MainActivity.this);
-        btn.setText("Click Me!");
-        setContentView(btn);
+        // Button btn = new Button(MainActivity.this);
+        // btn.setText("Click Me!");
+        // setContentView(btn);
+
+        LinearLayout layout = new LinearLayout(MainActivity.this);
+        Button btn1 = new Button(MainActivity.this);
+        btn1.setText("Btn 1");
+        layout.addView(btn1);
+        Button btn2 = new Button(MainActivity.this);
+        btn2.setText("Btn 2");
+        layout.addView(btn2);
+        Button btn3 = new Button(MainActivity.this);
+        btn3.setText("Btn 3");
+        layout.addView(btn3);
+
+        setContentView(layout);
+
+
+
+
     }
 }
